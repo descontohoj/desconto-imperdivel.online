@@ -1,112 +1,81 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content="#000000">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
   <link rel="stylesheet" href="https://c2.cdn1tp.net/1bcd9aff77e94f04877ed9d534aaef02/css/style.css">
-  
-  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://dominio-permitido.com">
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://desconto-imperdivel.online">
+  <style>
+    /* Estilo para o modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999; /* Garante que o modal esteja acima de todos os outros elementos */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
 
-  
-<style>
-/* Estilo para o modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
-}
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      animation-name: modalopen;
+      animation-duration: 0.5s;
+      text-align: center;
+    }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  animation-name: modalopen;
-  animation-duration: 0.5s;
-  text-align: center;
-}
+    @keyframes modalopen {
+      from {opacity: 0}
+      to {opacity: 1}
+    }
 
-@keyframes modalopen {
-  from {opacity: 0}
-  to {opacity: 1}
-}
+    /* Estilo para o botão de fechar */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
 
-/* Estilo para o botão de fechar */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
+    /* Estilo para o botão pulsante */
+    .btn {
+      background-color: #4CAF50; /* Cor de fundo */
+      border: none; /* Remove a borda */
+      color: white; /* Cor do texto */
+      padding: 15px 20px; /* Espaçamento interno */
+      text-align: center; /* Alinhamento do texto */
+      text-decoration: none; /* Remove a decoração de texto */
+      display: inline-block; /* Exibe como bloco */
+      font-size: 16px; /* Tamanho da fonte */
+      border-radius: 8px; /* Borda arredondada */
+      transition-duration: 0.4s; /* Duração da transição */
+      cursor: pointer; /* Cursor apontando */
+    }
 
-/* Estilo para o botão pulsante */
-.btn {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 8px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #45a049;
-}
-</style>
+    .btn:hover {
+      background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    }
+  </style>
 </head>
 <body>
-  <style>
-  .navbar {
-  overflow: hidden;
-  background-color: #000E48;
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  background: #ddd;
-  color: black;
-}
-
-.main {
-  margin-top: 30px;
-}
-  </style>
 
   <div class="navbar">
     <a href="#home" id="umdoistrestplink1"></a>
@@ -130,103 +99,136 @@
   <div class="container" style="margin: 0 auto;">
     <div class="spinBtn">Girar</div>
     <div class="wheel">
-        <div class="number" style="--i:1;--clr:#db7093;"><span>R$ 500</span></div>
-        <div class="number" style="--i:2;--clr:#20b2aa;"><span>R$ 100</span></div>
-        <div class="number" style="--i:3;--clr:#daa520;"><span>R$ 300</span></div>
-        <div class="number" style="--i:4;--clr:#ff340f;"><span>R$ 250</span></div>
-        <div class="number" style="--i:5;--clr:#4169e1;"><span>R$ 50</span></div>
-        <div class="number" style="--i:6;--clr:#3cb371;"><span>R$ 700</span></div>
-        <div class="number" style="--i:7;--clr:#d63e92;"><span>R$ 600</span></div>
-        <div class="number" style="--i:8;--clr:#ff7f50;"><span>R$ 1.000</span></div>
+      <div class="number" style="--i:1;--clr:#db7093;"><span>R$ 500</span></div>
+      <div class="number" style="--i:2;--clr:#20b2aa;"><span>R$ 100</span></div>
+      <div class="number" style="--i:3;--clr:#daa520;"><span>R$ 300</span></div>
+      <div class="number" style="--i:4;--clr:#ff340f;"><span>R$ 250</span></div>
+      <div class="number" style="--i:5;--clr:#4169e1;"><span>R$ 50</span></div>
+      <div class="number" style="--i:6;--clr:#3cb371;"><span>R$ 700</span></div>
+      <div class="number" style="--i:7;--clr:#d63e92;"><span>R$ 600</span></div>
+      <div class="number" style="--i:8;--clr:#ff7f50;"><span>R$ 1.000</span></div>
     </div>
   </div>
 
-<script>
-// Função para obter os parâmetros da URL
-function getUTMParameters(url) {
-    let params = {};
-    let urlParts = url.split('?');
-    if (urlParts.length > 1) {
+  <!-- Script para o modal e a roleta -->
+  <script>
+    // Função para obter os parâmetros da URL
+    function getUTMParameters(url) {
+      let params = {};
+      let urlParts = url.split('?');
+      if (urlParts.length > 1) {
         let queryString = urlParts[1];
         let pairs = queryString.split('&');
         for (let pair of pairs) {
-            let keyValue = pair.split('=');
-            let key = decodeURIComponent(keyValue[0]);
-            let value = decodeURIComponent(keyValue[1]);
-            params[key] = value;
+          let keyValue = pair.split('=');
+          let key = decodeURIComponent(keyValue[0]);
+          let value = decodeURIComponent(keyValue[1]);
+          params[key] = value;
         }
+      }
+      return params;
     }
-    return params;
-}
 
-// Seletor dos elementos
-let wheel = document.querySelector('.wheel');
-let spinBtn = document.querySelector('.spinBtn');
-let modal = document.getElementById("myModal");
-let closeBtn = document.getElementsByClassName("close")[0];
-let prizeBtn = document.getElementsByClassName("btn")[0];
+    // Seletor dos elementos
+    let wheel = document.querySelector('.wheel');
+    let spinBtn = document.querySelector('.spinBtn');
+    let modal = document.getElementById("myModal");
+    let closeBtn = document.getElementsByClassName("close")[0];
+    let prizeBtn = document.getElementsByClassName("btn")[0];
 
-// Obter a URL anterior
-let referrerURL = document.referrer;
+    // Ação do botão "Aproveitar meu prêmio"
+    prizeBtn.onclick = function() {
+      // Construir a próxima URL com os parâmetros da URL anterior
+      let nextURL = 'https://61c060-0f.myshopify.com/collections/roleta?utm_source=' + referrerParams['utm_source'] + '&utm_medium=' + referrerParams['utm_medium'] + '&utm_campaign=' + referrerParams['utm_campaign'] + '&utm_content=' + referrerParams['utm_content'];
+      window.open(nextURL, '_blank').focus();
+    }
 
-// Obter os parâmetros da URL anterior
-let referrerParams = getUTMParameters(referrerURL);
+    // Ação do botão "Girar"
+    spinBtn.onclick = function(){
+      let angle = 1440 + Math.floor(Math.random() * 360); // 4 full rotations plus some random angle
+      wheel.style.transition = "transform 3.5s ease-out";
+      wheel.style.transform = "rotate(" + angle + "deg)";
 
-// Ação do botão "Aproveitar meu prêmio"
-prizeBtn.onclick = function() {
-    // Construir a próxima URL com os parâmetros da URL anterior
-    let nextURL = 'https://61c060-0f.myshopify.com/collections/roleta?utm_source=' + referrerParams['utm_source'] + '&utm_medium=' + referrerParams['utm_medium'] + '&utm_campaign=' + referrerParams['utm_campaign'] + '&utm_content=' + referrerParams['utm_content'];
-    window.open(nextURL, '_blank').focus();
-}
-
-// Ação do botão "Girar"
-spinBtn.onclick = function(){
-    let angle = 1440 + Math.floor(Math.random() * 360); // 4 full rotations plus some random angle
-    wheel.style.transition = "transform 3.5s ease-out";
-    wheel.style.transform = "rotate(" + angle + "deg)";
-    
-    setTimeout(() => {
+      setTimeout(() => {
         let resultAngle = 360 - (45 * 7) + 15; // Adjust angle to land on 730
         wheel.style.transition = "transform 0.5s ease-out";
         wheel.style.transform = "rotate(" + resultAngle + "deg)";
         setTimeout(() => {
-            modal.style.display = "block"; // Exibe o modal
+          modal.style.display = "block"; // Exibe o modal
         }, 2000); // Alterado para 2000ms (2 segundos)
-    }, 3500);
-}
-
-// Ação do botão "Fechar modal"
-closeBtn.onclick = function() {
-    modal.style.display = "none";
-}
-
-// Ação do botão "Fechar modal clicando fora"
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+      }, 3500);
     }
-}
-</script>
 
-<script>
-// URL de origem
-var urlOrigem = "https://desconto-imperdivel.online/roletamag2?utm_source=campaign_id&utm_medium=campaign_name&utm_campaign=adset_name&utm_content=ad_name";
+    // Ação do botão "Fechar modal"
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
 
-// URL de destino
-var urlDestino = "https://61c060-0f.myshopify.com/collections/roleta/";
+    // Ação do botão "Fechar modal clicando fora"
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
-// Extrai os parâmetros da URL de origem
-var urlParams = new URLSearchParams(urlOrigem.split("?")[1]);
+  <!-- Script para o acompanhamento de URL -->
+  <script>
+    // NEMU
+    function onLoad() {
+      var links = document.getElementsByTagName("a");
+      var trackingParams = [
+        "utm_source",
+        "utm_campaign",
+        "utm_medium",
+        "utm_content",
+        "utm_term",
+        "src",
+        "sck",
+      ];
 
-// Adiciona os parâmetros UTM à URL de destino
-urlDestino += "?utm_source=" + urlParams.get("utm_source") +
-              "&utm_medium=" + urlParams.get("utm_medium") +
-              "&utm_campaign=" + urlParams.get("utm_campaign") +
-              "&utm_content=" + urlParams.get("utm_content");
+      for (var i = 0, n = links.length; i < n; i++) {
+        if (links[i].href.includes("#")) {
+          continue;
+        }
 
-// Imprime a URL de destino com os parâmetros UTM
-console.log(urlDestino);
-</script>
+        var link = new URL(links[i].href);
+
+        for (let i = 0; i < trackingParams.length; i++) {
+          link.searchParams.delete(trackingParams[i]);
+        }
+
+        var href =
+          link.href.trim() +
+          (link.href.indexOf("?") > 0 ? "&" : "?") +
+          document.location.search.replace("?", "").toString();
+        links[i].href = href;
+      }
+    }
+
+    setInterval(onLoad, 500);
+  </script>
+
+  <!-- Script para o rastreamento -->
+  <script src="https://trackings.nemu.com.br/trackings/script.js" async data-tracking-id="CC3s8Ui9Cf" crossorigin="anonymous"></script>
+
+  <!-- Script para o Pixel do Facebook -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '455650630233851');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=455650630233851&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 
 </body>
 </html>
