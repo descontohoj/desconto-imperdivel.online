@@ -8,14 +8,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- Google tag (gtag.js) -->
 <!-- Google Analytics integration -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1MEXMCNKJX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-1MEXMCNKJX');
-</script>
 
 <!-- Existing JavaScript functionality -->
 <script>
