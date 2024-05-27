@@ -1,0 +1,4 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+19:30:09	38238/38238	---MCZ	200	added ('OK')	text/html	date:Mon,%2027%20May%202024%2022:30:09%20GMT	https://saque.social/lotedesa/	C:/Meus%20Sites/ltd/saque.social/lotedesa/index.html	(from )
+19:30:09	28/28	---M--	200	added ('OK')	text/plain	etag:%221c-65270717-10232d;;;%22	https://saque.social/robots.txt		(from )
+19:30:09	1555/1555	---M--	400	error ('Bad%20Request')	text/html	date:Mon,%2027%20May%202024%2022:30:09%20GMT	https://www.googletagmanager.com/gtm.js?id=	C:/Meus%20Sites/ltd/www.googletagmanager.com/gtm.05445.delayed	(from https://saque.social/lotedesa/)
