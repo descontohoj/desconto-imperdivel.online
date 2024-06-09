@@ -1,0 +1,240 @@
+.bitlogin-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+#google-login,
+#facebook-login,
+#apple-login,
+#whatsapp-login,
+#microsoft-login,
+#twitter-login,
+#amazon-login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  justify-content: start;
+  margin: 0;
+  overflow: hidden;
+  padding-inline: 18px;
+  min-width: unset;
+  min-height: unset;
+  transition: all 0.2s ease-in-out;
+  width: 300px;
+  /* width: 100%; */
+}
+
+#google-login.scheme-black,
+#facebook-login.scheme-black,
+#apple-login.scheme-black,
+#whatsapp-login.scheme-black,
+#microsoft-login.scheme-black,
+#twitter-login.scheme-black,
+#amazon-login.scheme-black {
+  background-color: black;
+  color: white;
+  border-color: transparent;
+}
+
+#google-login.scheme-black:hover,
+#facebook-login.scheme-black:hover,
+#apple-login.scheme-black:hover,
+#whatsapp-login.scheme-black:hover,
+#microsoft-login.scheme-black:hover,
+#twitter-login.scheme-black:hover,
+#amazon-login.scheme-black:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#google-login.scheme-white,
+#facebook-login.scheme-white,
+#apple-login.scheme-white,
+#whatsapp-login.scheme-white,
+#microsoft-login.scheme-white,
+#twitter-login.scheme-white,
+#amazon-login.scheme-white {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+#google-login.scheme-white:hover,
+#apple-login.scheme-white:hover,
+#facebook-login.scheme-white:hover,
+#whatsapp-login.scheme-white:hover,
+#microsoft-login.scheme-white:hover,
+#twitter-login.scheme-white:hover,
+#amazon-login.scheme-white:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Start region scheme match */
+#google-login.scheme-match {
+  background-color: white;
+  border-color: black;
+  color: black;
+}
+
+#facebook-login.scheme-match {
+  background-color: #1778f2;
+  color: white;
+}
+
+#apple-login.scheme-match {
+  background-color: black;
+  color: white;
+}
+
+#whatsapp-login.scheme-match {
+  background-color: #25d366;
+  color: white;
+}
+
+#microsoft-login.scheme-match {
+  background-color: #2f2f2f;
+  color: white;
+  border-color: #2f2f2f;
+}
+
+#twitter-login.scheme-match {
+  background-color: #000000;
+  color: white;
+  border-color: #000000;
+}
+
+#amazon-login.scheme-match {
+  background-color: #ff9900;
+  color: white;
+  border-color: #ff9900;
+}
+
+#google-login.scheme-match:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* End region scheme match */
+
+/* Start region scheme matchOutline */
+#google-login.scheme-match-outline {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+#facebook-login.scheme-match-outline {
+  background-color: white;
+  color: #1778f2;
+  border-color: #1778f2;
+}
+
+#apple-login.scheme-match-outline {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+#whatsapp-login.scheme-match-outline {
+  background-color: white;
+  color: #25d366;
+  border-color: #25d366;
+}
+
+#microsoft-login.scheme-match-outline {
+  background-color: #ffffff;
+  color: #2f2f2f;
+  border-color: #2f2f2f;
+}
+
+#twitter-login.scheme-match-outline {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #000000;
+}
+
+#amazon-login.scheme-match-outline {
+  background-color: #ffffff;
+  color: #ff9900;
+  border-color: #ff9900;
+}
+
+#google-login.scheme-match-outline:hover,
+#apple-login.scheme-match-outline:hover,
+#facebook-login.scheme-match-outline:hover,
+#whatsapp-login.scheme-match-outline:hover,
+#microsoft-login.scheme-match-outline:hover,
+#twitter-login.scheme-match-outline:hover,
+#amazon-login.scheme-match-outline:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* End region scheme matchOutline */
+
+#google-login > p,
+#facebook-login > p,
+#apple-login > p,
+#whatsapp-login > p,
+#microsoft-login > p,
+#twitter-login > p,
+#amazon-login > p {
+  margin: unset;
+}
+
+/* #google-login {
+  margin-top: 24px;
+} */
+
+#google-login::after,
+#facebook-login::after,
+#apple-login::after,
+#whatsapp-login::after,
+#microsoft-login::after,
+#twitter-login::after,
+#amazon-login::after {
+  content: unset;
+}
+
+.skeleton-box {
+  height: 28px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #dddbdd;
+}
+
+.skeleton-root {
+  margin-block: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.skeleton-box::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2s infinite;
+  --webkit-animation: shimmer 2s infinite;
+  content: "";
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
