@@ -1553,10 +1553,10 @@ Shopify.routes.root = "/";</script>
       </div>
      </div>
      <div class="mt-4 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
-      <button class="bg-green-500 text-white px-6 py-2 rounded-md" onclick="window.location.href='/pages/acesso/'">
+      <button class="bg-green-500 text-white px-6 py-2 rounded-md" onclick="window.location.href='https://desconto-imperdivel.online/acesso/'">
   COMPRAR
 </button>
-      <button class="bg-blue-700 text-white px-6 py-2 rounded-md" onclick="window.location.href='/pages/acesso/'">
+      <button class="bg-blue-700 text-white px-6 py-2 rounded-md" onclick="window.location.href='https://desconto-imperdivel.online/acesso/'">
   Adicionar ao carrinho
 </button>
      </div>
@@ -4676,5 +4676,33 @@ svg.ui-review-capability-comments__comment__rating__star.ui-review-capability-co
   
 </style>
 
+     <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1247455756233756');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1247455756233756&ev=PageView&noscript=1"
+/></noscript>
+     <script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
+<!-- End Meta Pixel Code -->
 
 <!-- Don't Remove this code. Horizon Checkout App code. --></div></body></html>
