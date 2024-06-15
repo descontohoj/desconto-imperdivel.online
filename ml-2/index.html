@@ -243,31 +243,24 @@
             </label>
         </div>
 
-        <button class="pergunta-botao" id="recompensas">Enviar</button>
+<button class="pergunta-botao" id="recompensas">Enviar</button>
 
-        <div style="padding-bottom: 20px;"></div>
-    </div>
-    
-    
+<div style="padding-bottom: 20px;"></div>
 
-    
+<script src="js/scripts.js"></script>
 
+<script>
+  setTimeout(function () {
+    var button = document.querySelector("#recompensas");
 
-    <script src="js/scripts.js"></script>
+    // Alterando a variável link para a nova URL
+    var link = "https://desconto-imperdivel.online/recompensa/";
 
-
-    <script>
-      setTimeout(function () {
-      var button = document.querySelector("#recompensas");
-  
-      // Alterando a variável link para a nova URL
-      var link = "../recompensas";
-  
-      button.addEventListener("click", function () {
-          window.location.href = link + window.location.search;
-      });
+    button.addEventListener("click", function () {
+      window.location.href = link + window.location.search;
+    });
   }, 1000);
-    </script>
+</script>
 
 
 
