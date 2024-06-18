@@ -295,7 +295,17 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1550000959187626&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-
+<script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
 
                     <script async="true" src="https://c1.cdn1tp.net/ghelper/googletagmanager.js"></script>
                 </body></html>
